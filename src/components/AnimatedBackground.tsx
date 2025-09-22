@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import LightRays from './LightRays';
 
 interface Line {
   id: number;
@@ -44,15 +45,28 @@ const AnimatedBackground = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden bg-black">
-      {/* Diagonal light lines */}
+      {/* WebGL Light Rays Effect */}
+      <LightRays
+        raysOrigin="top-center"
+        raysColor="#00ffff"
+        raysSpeed={1.5}
+        lightSpread={0.8}
+        rayLength={1.2}
+        followMouse={true}
+        mouseInfluence={0.1}
+        noiseAmount={0.1}
+        distortion={0.05}
+      />
+      
+      {/* Subtle diagonal lines for additional depth */}
       {lines.map((line) => (
         <div
           key={line.id}
-          className="absolute opacity-20"
+          className="absolute opacity-10"
           style={{
             width: `${line.length}px`,
             height: '1px',
-            background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(0,255,255,0.2), transparent)',
             left: `${line.startX}%`,
             top: `${line.startY}%`,
             transform: `rotate(${line.angle}deg)`,
@@ -64,10 +78,7 @@ const AnimatedBackground = () => {
       ))}
       
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/50 to-black" />
-      
-      {/* Radial gradient for depth */}
-      <div className="absolute inset-0 bg-gradient-radial from-gray-900/20 via-transparent to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/50 to-black z-10 pointer-events-none" />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Shuffle from './Shuffle';
 
 const HeroSection = () => {
   const features = [
@@ -27,20 +28,28 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Main Heading */}
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+          className="mb-6"
         >
-          <span className="text-white">
-            Launch a Personal Site
-          </span>
-          <br />
-          <span className="text-gray-400">
-            That Wins Opportunities
-          </span>
-        </motion.h1>
+          <Shuffle
+            text="Launch a Personal Site That Wins Opportunities"
+            shuffleDirection="right"
+            duration={0.35}
+            animationMode="evenodd"
+            shuffleTimes={1}
+            ease="power3.out"
+            stagger={0.03}
+            threshold={0.1}
+            triggerOnce={true}
+            triggerOnHover={true}
+            respectReducedMotion={true}
+            className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+            tag="h1"
+          />
+        </motion.div>
 
         {/* Subtitle */}
         <motion.p

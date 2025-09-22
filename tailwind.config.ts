@@ -78,6 +78,10 @@ export default {
           "90%": { opacity: "0.3" },
           "100%": { transform: "translateX(calc(100vw + 100px)) translateY(50px)", opacity: "0" }
         },
+        "diagonal-float": {
+          "0%, 100%": { opacity: "0.1", transform: "translateX(0) translateY(0) rotate(var(--angle))" },
+          "50%": { opacity: "0.3", transform: "translateX(20px) translateY(-20px) rotate(var(--angle))" }
+        },
         "fade-in-up": {
           "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
@@ -91,6 +95,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "float-line": "float-line 15s linear infinite",
+        "diagonal-float": "diagonal-float 8s ease-in-out infinite",
         "fade-in-up": "fade-in-up 1s ease-out",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
       },

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Shuffle from './Shuffle';
+import ShinyText from './ShinyText';
 
 const HeroSection = () => {
   const features = [
@@ -46,7 +47,7 @@ const HeroSection = () => {
             triggerOnce={true}
             triggerOnHover={true}
             respectReducedMotion={true}
-            className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+            className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-playfair"
             tag="h1"
           />
         </motion.div>
@@ -70,10 +71,10 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         >
           <Button className="px-8 py-3 bg-white text-black hover:bg-gray-100 rounded-full font-medium">
-            Start Building
+            <ShinyText text="Start Building" disabled={false} speed={3} />
           </Button>
           <Button variant="outline" className="px-8 py-3 border-gray-600 text-gray-300 hover:bg-gray-800 rounded-full font-medium">
-            See Examples  
+            <ShinyText text="See Examples" disabled={false} speed={3} />
           </Button>
         </motion.div>
 

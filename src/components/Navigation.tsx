@@ -15,12 +15,12 @@ const Navigation = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-gray-300 hover:text-white transition-colors text-sm">
+          <a href="#home" className="text-gray-300 hover:text-white transition-colors text-sm">
             Home
-          </Link>
-          <Link to="/portfolio" className="text-gray-300 hover:text-white transition-colors text-sm">
+          </a>
+          <a href="#portfolio" className="text-gray-300 hover:text-white transition-colors text-sm">
             Portfolio
-          </Link>
+          </a>
           <a href="#features" className="text-gray-300 hover:text-white transition-colors text-sm">
             Features
           </a>

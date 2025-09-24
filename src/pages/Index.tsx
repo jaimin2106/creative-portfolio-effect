@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import MagicBento from '@/components/MagicBento';
 import CardSwap, { Card } from '@/components/CardSwap';
+import PremiumServices from '@/components/PremiumServices';
 
 const Index = () => {
   const portfolioCards = [
@@ -182,6 +183,11 @@ const Index = () => {
               </div>
             </motion.div>
           </div>
+        </section>
+
+        {/* Premium Services Section */}
+        <section id="services" className="relative">
+          <PremiumServices />
         </section>
       </main>
     </div>

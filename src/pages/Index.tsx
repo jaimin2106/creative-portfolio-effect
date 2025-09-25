@@ -5,7 +5,6 @@ import HeroSection from '@/components/HeroSection';
 import MagicBento from '@/components/MagicBento';
 import CardSwap, { Card } from '@/components/CardSwap';
 import PremiumServices from '@/components/PremiumServices';
-import LandingHero from '@/components/LandingHero';
 
 const Index = () => {
   const portfolioCards = [
@@ -189,11 +188,6 @@ const Index = () => {
         {/* Premium Services Section */}
         <section id="services" className="relative">
           <PremiumServices />
-        </section>
-
-        {/* Landing Hero Section */}
-        <section className="relative">
-          <LandingHero />
         </section>
       </main>
     </div>

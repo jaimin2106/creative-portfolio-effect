@@ -1,120 +1,115 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import ShinyText from './ShinyText';
 
 const HeroSection = () => {
-  const features = [
-    { icon: '📂', name: 'Catalog' },
-    { icon: '🎨', name: 'Layers' },
-    { icon: '⭕', name: 'Circoles' },
-    { icon: '💬', name: 'Quotient' },
-    { icon: '⏰', name: 'Hours' },
-  ];
-
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden bg-black">
-      {/* Animated geometric lines background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Diagonal lines */}
-        <div className="absolute top-10 left-10 w-32 h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-24 h-0.5 bg-gradient-to-r from-transparent via-white/15 to-transparent -rotate-45 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-40 left-1/4 w-28 h-0.5 bg-gradient-to-r from-transparent via-white/10 to-transparent rotate-135 animate-pulse delay-2000"></div>
+    <section className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
+      {/* Ultra Premium Background */}
+      <div className="absolute inset-0 bg-black">
+        {/* Sophisticated gradient mesh */}
+        <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-white/8 via-white/4 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-tl from-white/6 via-white/3 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-white/5 via-white/2 to-transparent rounded-full animate-pulse delay-2000"></div>
         
-        {/* Scattered stars/sparkles */}
-        <div className="absolute top-20 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 left-1/4 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-500"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-white rounded-full animate-pulse delay-1500"></div>
-        <div className="absolute top-1/2 right-10 w-1 h-1 bg-white rounded-full animate-pulse delay-700"></div>
-        <div className="absolute bottom-20 left-10 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-300"></div>
+        {/* Premium grid overlay */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '100px 100px'
+        }}></div>
         
-        {/* Large sparkle in bottom right */}
-        <div className="absolute bottom-10 right-10">
-          <div className="relative w-6 h-6">
-            <div className="absolute inset-0 bg-white rotate-45 transform origin-center animate-pulse" style={{
-              clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)'
-            }}></div>
-          </div>
+        {/* Elegant light rays */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-white/20 to-transparent animate-pulse delay-500"></div>
+          <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-white/15 to-transparent animate-pulse delay-1500"></div>
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* Status Badge */}
+      <div className="container mx-auto text-center relative z-10 max-w-6xl">
+        {/* Ultra Premium Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-8"
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="mb-12"
         >
-          <div className="inline-flex items-center px-6 py-3 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
-            <span className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse"></span>
-            <span className="text-sm text-white/80 font-medium">Build Your Online Identity Today</span>
+          <div className="mb-6">
+            <span className="inline-block px-6 py-3 rounded-full border border-white/20 text-white/80 text-sm font-medium tracking-wider uppercase backdrop-blur-sm bg-white/5 mb-8">
+              Premium Digital Excellence
+            </span>
           </div>
-        </motion.div>
-
-        {/* Main Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="mb-8"
-        >
-          <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            Launch a Personal Site<br />
-            That Wins Opportunities
+          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-white mb-8 font-playfair leading-[0.9] tracking-tight">
+            Luxury
+            <span className="block mt-2">
+              <ShinyText text="Digital Craft" className="text-7xl md:text-8xl lg:text-9xl font-bold font-playfair" />
+            </span>
           </h1>
+          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light tracking-wide">
+            Where visionary design meets flawless execution. Creating digital masterpieces that redefine excellence.
+          </p>
         </motion.div>
 
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-lg text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed"
-        >
-          Whether you're a designer, developer, or creator, PersonaForge helps 
-          you stand out with a site that feels professional, and you.
-        </motion.p>
-
-        {/* Action Buttons */}
+        {/* Ultra Premium CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-20"
+          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          className="flex flex-col sm:flex-row gap-8 justify-center mb-20"
         >
-          <Button className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-full font-medium text-lg hover:bg-white hover:text-black transition-all duration-300">
-            Start Building
+          <Button className="px-12 py-6 bg-white text-black hover:bg-gray-100 rounded-full font-semibold text-xl transition-all duration-500 shadow-2xl hover:shadow-white/30 hover:scale-105 transform border-2 border-transparent hover:border-white/20">
+            Begin Your Journey
           </Button>
-          <Button className="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-full font-medium text-lg hover:bg-white/20 transition-all duration-300">
-            See Examples
+          <Button className="px-12 py-6 border-2 border-white/40 text-white hover:border-white hover:bg-white/10 rounded-full font-semibold text-xl transition-all duration-500 backdrop-blur-md bg-white/5 hover:bg-white/15 hover:scale-105 transform">
+            Explore Excellence
           </Button>
         </motion.div>
 
-        {/* Features */}
+        {/* Premium Excellence Pillars */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-8 text-sm text-white/40"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto"
         >
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.name}
-              initial={{ opacity: 0, y: 10 }}
+          {[
+            { 
+              title: "Bespoke Development", 
+              desc: "Handcrafted solutions architected with precision and built with the finest technologies",
+              icon: "⚡"
+            },
+            { 
+              title: "Luxury Design", 
+              desc: "Sophisticated interfaces that embody elegance while delivering exceptional user experiences",
+              icon: "✨"
+            },
+            { 
+              title: "Strategic Mastery", 
+              desc: "Visionary consulting that transforms ambitious ideas into market-defining digital products",
+              icon: "🎯"
+            }
+          ].map((feature, index) => (
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-              className="flex items-center space-x-3"
+              transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
+              className="group p-8 rounded-3xl border border-white/15 hover:border-white/40 transition-all duration-500 backdrop-blur-md bg-gradient-to-br from-white/8 to-white/4 hover:from-white/12 hover:to-white/8 hover:scale-105 transform"
             >
-              <span className="text-lg opacity-60 grayscale">{feature.icon}</span>
-              <span className="font-medium">{feature.name}</span>
+              <div className="text-4xl mb-6 group-hover:scale-110 transform transition-transform duration-300">
+                {feature.icon}
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-white transition-colors font-playfair">
+                {feature.title}
+              </h3>
+              <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-lg leading-relaxed">
+                {feature.desc}
+              </p>
             </motion.div>
           ))}
         </motion.div>
-      </div>
-
-      {/* Curved glow at bottom */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-full max-w-4xl">
-        <div className="w-full h-48 bg-gradient-to-t from-white/20 via-white/10 to-transparent rounded-t-full blur-xl"></div>
-        <div className="absolute inset-0 w-full h-48 bg-gradient-to-t from-white/5 to-transparent rounded-t-full"></div>
       </div>
     </section>
   );

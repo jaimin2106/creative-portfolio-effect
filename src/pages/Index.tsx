@@ -1,21 +1,13 @@
 import { motion } from 'framer-motion';
-import AnimatedBackground from '@/components/AnimatedBackground';
-import Navigation from '@/components/Navigation';
+import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
-import MagicBento from '@/components/MagicBento';
 import CardSwap, { Card } from '@/components/CardSwap';
 import PremiumServices from '@/components/PremiumServices';
 
 const Index = () => {
 
   return (
-    <div className="min-h-screen relative">
-      {/* Animated background with geometric lines */}
-      <AnimatedBackground />
-      
-      {/* Navigation */}
-      <Navigation />
-      
+    <Layout>
       {/* Main content */}
       <main className="relative z-10">
         {/* Hero Section */}
@@ -86,7 +78,7 @@ const Index = () => {
           <PremiumServices />
         </section>
       </main>
-    </div>
+    </Layout>
   );
 };
 
